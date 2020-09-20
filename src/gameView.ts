@@ -30,6 +30,14 @@ class GameView {
     this.board.innerHTML = "";
   };
 
+  private win = () => {
+    const gameOverElement = document.createElement("div");
+    gameOverElement.innerHTML = "SUDOKU SOLVED";
+    gameOverElement.className = "go";
+    gameOverElement.onclick = this.game.restart;
+    this.board.appendChild(gameOverElement);
+  };
+
   private drawCell = (i: number, j: number) => {
     const e = document.createElement("div");
     e.className =
@@ -45,7 +53,8 @@ class GameView {
     e.innerHTML = (this.game.board.getValue(i, j) || " ").toString();
     e.onclick = () => {
       this.game.board.setValue(i, j, this.game.getSelectedNum());
-      this.draw();
+      if (this.game.board.isValid()) this.win();
+      else this.draw();
     };
     this.board.appendChild(e);
   };

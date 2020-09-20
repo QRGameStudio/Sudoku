@@ -33,3 +33,15 @@ body,
 .btn.sel {
   background-color: lightgray;
 }
+
+.go {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 45vh;
+  position: absolute;
+  text-align: center;
+  font-size: xx-large;
+}

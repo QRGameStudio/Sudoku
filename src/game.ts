@@ -16,14 +16,16 @@ const defaultSudoku = [
 
 class Game {
   readonly board: Board;
+  readonly restart: () => void;
   private gameView: GameView;
   private selectedNum: number;
 
-  constructor(contentElement: HTMLElement) {
+  constructor(contentElement: HTMLElement, restart: () => void) {
     this.board = new Board(defaultSudoku);
     this.selectedNum = 1;
     this.gameView = new GameView(contentElement, this);
     this.gameView.draw();
+    this.restart = restart;
   }
 
   setSelectedNum = (val: number) => (this.selectedNum = val);

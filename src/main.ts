@@ -3,7 +3,7 @@
 const init = () => {
   const content = document.getElementById("game-content");
   content.innerHTML = "";
-  const game = new Game(content);
+  const game = new Game(content, init);
 };
 
 window.onload = init;
