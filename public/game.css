@@ -1,0 +1,35 @@
+html,
+body,
+#game-content {
+  width: 100%;
+  height: 100%;
+}
+
+.cell,
+.btn {
+  position: absolute;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.cell.lBor {
+  border-left: 2px solid black;
+}
+
+.cell.rBor {
+  border-right: 2px solid black;
+}
+.cell.bBor {
+  border-bottom: 2px solid black;
+}
+.cell.tBor {
+  border-top: 2px solid black;
+}
+
+.cell.def {
+  background-color: lightgray;
+}
+
+.btn.sel {
+  background-color: lightgray;
+}
