@@ -3,35 +3,37 @@ body,
 #game-content {
   width: 100%;
   height: 100%;
+  background-color: var(--theme-primary);
+  color: var(--theme-contrast);
 }
 
 .cell,
-.btn {
+.bttn {
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid var(--theme-contrast);
   text-align: center;
 }
 
 .cell.lBor {
-  border-left: 2px solid black;
+  border-left: 2px solid var(--theme-contrast);
 }
 
 .cell.rBor {
-  border-right: 2px solid black;
+  border-right: 2px solid var(--theme-contrast);
 }
 .cell.bBor {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--theme-contrast);
 }
 .cell.tBor {
-  border-top: 2px solid black;
+  border-top: 2px solid var(--theme-contrast);
 }
 
 .cell.def {
-  background-color: lightgray;
+  background-color: var(--theme-secondary);
 }
 
-.btn.sel {
-  background-color: lightgray;
+.bttn.sel {
+  background-color: var(--theme-secondary);
 }
 
 .go {

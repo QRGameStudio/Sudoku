@@ -58,7 +58,7 @@ class Game {
 
   private drawBtn = (val: number) => {
     const e = document.createElement("div");
-    e.className = "btn " + (this.selectedNum === val ? "sel" : "");
+    e.className = "bttn " + (this.selectedNum === val ? "sel" : "");
     e.style.width = `${this.cellWidht}px`;
     e.style.height = `${this.cellWidht}px`;
     e.style.left = `${this.leftOffset + (val - 1) * this.cellWidht}px`;
